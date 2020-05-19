@@ -39,9 +39,9 @@
   * @param  line: assert_param error line source number
   * @retval None
   */
-void assert_failed(uint8_t* file, uint32_t line)
+void asserts_failed(uint8_t* file, uint32_t line)
 {
-    Print_fmt("%s:%d: Assert Failed.", file, line);
+    Print_fmt("%s:%d: Param Assert Failed.", file, line);
 
     while (1)
     { }
@@ -50,4 +50,3 @@ void assert_failed(uint8_t* file, uint32_t line)
 #endif /* USE_ASSERTS */
 
 /***********************************END OF FILE********************************/
-
