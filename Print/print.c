@@ -60,9 +60,9 @@ static uint16_t print_puts(enum _PRINT_TYPES type,uint8_t *buf, uint16_t len)
     /* 连续发送数据 */
     for (no = 0; no < num; no++)
     {
+        frame.frame.type = type;
         frame.frame.f_num = num;
         frame.frame.f_no = no;
-        frame.frame.type = type;
         /* 设置每帧发送的数据字节数 */
         if ((len - position) >= 6)
         {

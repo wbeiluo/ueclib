@@ -29,10 +29,10 @@ typedef union _FrameBuffer
 {
     struct
     {
+        uint8_t type:4;   /* 帧类型 */
         uint8_t f_num:4;  /* 总帧数 */
         uint8_t f_no:4;   /* 当前帧序号 */
         uint8_t d_num:4;  /* 有效数据字节数 */
-        uint8_t type:4;   /* 帧类型 */
         uint8_t data[6];  /* 数据 */
     } frame;
 

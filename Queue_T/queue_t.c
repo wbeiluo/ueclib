@@ -27,7 +27,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "queue_t.h"
-
 #include "../Asserts/asserts.h"
 #include "../Print/print.h"
 
@@ -134,7 +133,7 @@ void *Queue_pop(pQueue_T queue)
 
     Asserts_param(queue != NULL);
 
-    if (Queue_empty(queue))
+    if (!Queue_empty(queue))
     {
         result = Array_get(&queue->array, queue->front);
         queue->size--;
@@ -160,7 +159,7 @@ void *Queue_front(pQueue_T queue)
 {
     Asserts_param(queue != NULL);
 
-    if (Queue_empty(queue))
+    if (!Queue_empty(queue))
     {
         return Array_get(&queue->array, queue->front);
 
@@ -184,7 +183,7 @@ void *Queue_back(pQueue_T queue)
 {
     Asserts_param(queue != NULL);
 
-    if (Queue_empty(queue))
+    if (!Queue_empty(queue))
     {
         return Array_get(&queue->array, queue->rear);
     }

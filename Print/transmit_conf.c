@@ -36,7 +36,8 @@ void transmit(uint8_t *buf, uint16_t len)
         return;
 
     // 测试使用，实际使用过程中依据具体接口实现
-    printf("%8s", buf);
+    printf("%c%c%c%c%c%c", buf[2], buf[3], buf[4],
+           buf[5], buf[6], buf[7]);
 }
 
 /***********************************END OF FILE********************************/

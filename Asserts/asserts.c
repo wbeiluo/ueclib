@@ -41,7 +41,7 @@
   */
 void asserts_failed(uint8_t* file, uint32_t line)
 {
-    Print_fmt("%s:%d: Param Assert Failed.", file, line);
+    Print_fmt("%s:%d: Params Assert Failed.\n", file, line);
 
     while (1)
     { }
